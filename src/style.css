@@ -1,8 +1,15 @@
 * {
     margin: 0;
     border: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
+body {
+    background-color: #fff;
+}
+
+/* Navigation */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -19,7 +26,6 @@
     color: black;
 }
 
-
 .nav__links a { 
     padding: 30px;
     text-decoration: none;
@@ -31,15 +37,141 @@
     color: rgb(219, 131, 0);
 }
 
-.hero   {
+/* Hero Section */
+.hero {
     background-color: #FFE8AF;
     padding: 4.5rem;
 }
 
-.hero h1 {
+.hero__text h1 {
     font-size: 64px;
+    margin-bottom: 20px;
 }
 
-.hero p {
+.hero__text p {
     font-size: 16px;
+    max-width: 600px;
+}
+
+/* Products Section */
+h2 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    margin: 5rem;
+}
+
+.product-container {
+    margin-top: 0;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.product-card {
+    width: 264px;
+    text-align: center;
+    position: relative;
+}
+
+.image-wrapper {
+    background-color: #FFE8AF;
+    border-radius: 12px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 265px;
+    z-index: 2;
+}
+
+.product-info {
+    background-color: white;
+    padding: 20px 10px 0;
+    border-radius: 0 0 12px 12px;
+}
+
+.product-info h3 {
+    font-size: 32px;
+    margin: 10px 0 5px;
+}
+
+.product-info p {
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+    margin-bottom: 5rem;
+}
+
+/* Subscribe Plans Section */
+.subscribe-section {
+    background-color: #FFE8AF;
+    padding: 4.5rem;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plan {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+
+.plan.pro {
+    border: 2px solid #00f; /* Blue border for the Pro plan */
+    cursor: pointer;
+}
+
+.plan h2 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00f; /* Blue price text */
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    text-align: center;
 }
