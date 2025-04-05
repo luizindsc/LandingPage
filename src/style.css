@@ -7,9 +7,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1.4rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
 }
 
-.nav a {
+.nav__logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+
+.nav__links a { 
+    padding: 30px;
     text-decoration: none;
     color: black;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: rgb(219, 131, 0);
+}
+
+.hero   {
+    background-color: #FFE8AF;
+    padding: 4.5rem;
+}
+
+.hero h1 {
+    font-size: 64px;
+}
+
+.hero p {
+    font-size: 16px;
 }
