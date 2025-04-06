@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.4rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.nav__logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+.nav__links a { 
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: rgb(219, 131, 0);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #FFE8AF;
+    padding: 4.5rem;
+}
+
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero__text {
+    flex: 1;
+}
+
+.hero__text h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero__text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero__image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero__image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Products Section */
+h2 {
+    text-align: center;
+    font-size: 64px;
+    margin: 5rem;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.product-card {
+    width: 264px;
+    text-align: center;
+    position: relative;
+}
+
+.image-wrapper {
+    background-color: #FFE8AF;
+    border-radius: 12px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 265px;
+    z-index: 2;
+}
+
+.product-info {
+    background-color: white;
+    padding: 20px 10px 0;
+    border-radius: 0 0 12px 12px;
+}
+
+.product-info h3 {
+    font-size: 32px;
+    margin: 10px 0 5px;
+}
+
+.product-info p {
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+    margin-bottom: 5rem;
+}
+
+/* Subscribe Plans Section */
+.subscribe-section {
+    background-color: #FFE8AF;
+    padding: 4.5rem;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+.container h1 {
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.plan {
+    position: relative;
+    width: 200px;
+    transition: transform 0.2s;
+}
+
+.plan:hover {
+    border: 2px solid #00f;
+    transform: scale(1.05);
+}
+
+.plan.pro {
+  
+    cursor: pointer;
+    border-radius: 10px; /* Ensure the border follows the image's rounded corners */
+}
+
+.plan-background {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.plan-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: black; /* Adjust text color if needed based on your image */
+}
+
+.plan h2 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00f; /* Blue price text */
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    text-align: center;
+}
+
+To make the items in your webpage responsive and stack them vertically (one below the other) on smaller screens, we need to modify the CSS to handle different screen sizes using techniques like flex-direction: column and media queries. I'll focus on the key sections of your layout: the hero section, product cards, and subscribe plans, ensuring they stack vertically on smaller screens while maintaining their horizontal layout on larger screens.
+
+Here’s the updated CSS with media queries to achieve this responsive behavior:
+
+css
+
+Recolher
+
+Encapsular
+
+Copiar
+* {
+    margin: 0;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.4rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+}
+
+.nav__logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+.nav__links a { 
+    padding: 30px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.nav a:hover {
+    color: rgb(219, 131, 0);
+}
+
+/* Hero Section */
+.hero {
+    background-color: #FFE8AF;
+    padding: 4.5rem;
+}
+
+.hero__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero__text {
+    flex: 1;
+}
+
+.hero__text h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.hero__text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero__image {
+    flex: 1;
+    text-align: right;
+}
+
+.hero__image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Products Section */
+h2 {
+    text-align: center;
+    font-size: 64px;
+    margin: 5rem;
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.product-card {
+    width: 264px;
+    text-align: center;
+    position: relative;
+}
+
+.image-wrapper {
+    background-color: #FFE8AF;
+    border-radius: 12px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.image-wrapper img {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 265px;
+    z-index: 2;
+}
+
+.product-info {
+    background-color: white;
+    padding: 20px 10px 0;
+    border-radius: 0 0 12px 12px;
+}
+
+.product-info h3 {
+    font-size: 32px;
+    margin: 10px 0 5px;
+}
+
+.product-info p {
+    font-size: 14px;
+    text-align: left;
+    color: #333;
+    margin-bottom: 5rem;
+}
+
+/* Subscribe Plans Section */
+.subscribe-section {
+    background-color: #FFE8AF;
+    padding: 4.5rem;
+}
+
+.container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.plan {
+    position: relative;
+    width: 200px;
+    transition: transform 0.2s;
+}
+
+.plan:hover {
+    border: 2px solid #00f;
+    transform: scale(1.05);
+}
+
+.plan.pro {
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.plan-background {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.plan-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: black;
+}
+
+.plan h2 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00f;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.description {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav__links {
+        margin-top: 1rem;
+    }
+
+    .nav__links a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 2rem;
+    }
+
+    .hero__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__text h1 {
+        font-size: 48px;
+    }
+
+    .hero__text p {
+        font-size: 14px;
+    }
+
+    .hero__image {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    /* Products Section */
+    h2 {
+        font-size: 48px;
+        margin: 3rem;
+    }
+
+    .product-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .image-wrapper {
+        height: 150px;
+    }
+
+    .image-wrapper img {
+        max-height: 200px;
+        top: -30px;
+    }
+
+    .product-info h3 {
+        font-size: 24px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+        margin-bottom: 3rem;
+    }
+
+    /* Subscribe Plans Section */
+    .subscribe-section {
+        padding: 2rem;
+    }
+
+    .container h1 {
+        font-size: 20px;
+    }
+
+    .plans {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .plan {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .plan h2 {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navigation */
+    .nav__logo a {
+        font-size: 24px;
+    }
+
+    .nav__links a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    /* Hero Section */
+    .hero__text h1 {
+        font-size: 36px;
+    }
+
+    .hero__text p {
+        font-size: 12px;
+    }
+
+    /* Products Section */
+    h2 {
+        font-size: 36px;
+        margin: 2rem;
+    }
+
+    .product-card {
+        max-width: 250px;
+    }
+
+    .image-wrapper {
+        height: 120px;
+    }
+
+    .image-wrapper img {
+        max-height: 180px;
+        top: -20px;
+    }
+
+    .product-info h3 {
+        font-size: 20px;
+    }
+
+    /* Subscribe Plans Section */
+    .container h1 {
+        font-size: 18px;
+    }
+
+    .plan {
+        max-width: 200px;
+    }
+
+    .plan h2 {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 24px;
+    }
+}
